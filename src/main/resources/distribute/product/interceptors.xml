@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+	        <mvc:mapping path="/live/**" />
+	        <bean class="com.kongzhong.external.internalsso.PermissionInterceptor">
+	        	<property name="permissionId" value="248" />
+	        	<property name="url" value="http://inf.hdservice.kongzhong.com/remoting/GroupPermissionService" />
+	        </bean>
+	    </mvc:interceptor>
+	    <mvc:interceptor>
+	        <mvc:mapping path="/stage/**" />
+	        <bean class="com.kongzhong.external.internalsso.PermissionInterceptor">
+	        	<property name="permissionId" value="249" />
+	        	<property name="url" value="http://inf.hdservice.kongzhong.com/remoting/GroupPermissionService" />
+	        </bean>
+	    </mvc:interceptor>
+	</mvc:interceptors>
+	
+</beans>

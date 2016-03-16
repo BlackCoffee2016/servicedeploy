@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="logger" class="com.kongzhong.external.log.KongzhongLogger">
+		<property name="appId" value="175" />
+		<property name="submitUrl" value="http://10.230.10.26:5051/remoting/AppExceptionService" />
+	</bean>
+
+	<bean id="handlerExceptionResolver" class="com.kongzhong.external.log.KongzhongExceptionHandler">
+		<property name="logger" ref="logger" />
+	</bean>
+
+</beans>
