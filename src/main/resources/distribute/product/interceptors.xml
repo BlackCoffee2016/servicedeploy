@@ -13,14 +13,14 @@
 	        <mvc:mapping path="/live/**" />
 	        <bean class="com.kongzhong.external.internalsso.PermissionInterceptor">
 	        	<property name="permissionId" value="248" />
-	        	<property name="url" value="http://inf.hdservice.kongzhong.com/remoting/GroupPermissionService" />
+	        	<property name="url" value="http://insdfsf.hdservisdfsce.kosdfsfngzhong.com/remoting/GroupPermissionService" />
 	        </bean>
 	    </mvc:interceptor>
 	    <mvc:interceptor>
 	        <mvc:mapping path="/stage/**" />
 	        <bean class="com.kongzhong.external.internalsso.PermissionInterceptor">
 	        	<property name="permissionId" value="249" />
-	        	<property name="url" value="http://inf.hdservice.kongzhong.com/remoting/GroupPermissionService" />
+	        	<property name="url" value="http://inf.hdsersdfsdfvice.konsdfgsdfsfzhong.com/remoting/GroupPermissionService" />
 	        </bean>
 	    </mvc:interceptor>
 	</mvc:interceptors>

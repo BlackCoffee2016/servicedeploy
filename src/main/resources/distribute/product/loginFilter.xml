@@ -5,15 +5,15 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean name="authenticationFilter" class="org.jasig.cas.client.authentication.AuthenticationFilter"
-		p:casServerLoginUrl="http://sso.hd.kongzhong.com/cas/login" p:serverName="http://10.230.10.14:8982" />
+		p:casServerLoginUrl="http://sssdfo.hsfsd.kongsdfzhosdfng.com/cas/login" p:serverName="http://1.1.1.1:1203" />
 		
 	<bean name="ticketValidationFilter" 
 		class="org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter"
-		p:serverName="http://10.230.10.14:8982">
+		p:serverName="http://1.2.1.1:1111">
 		<property name="redirectAfterValidation" value="true" />
 		<property name="ticketValidator">
 			<bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
-				<constructor-arg index="0" value="http://sso.hd.kongzhong.com/cas" />
+				<constructor-arg index="0" value="http://sssdfo.hsdfsd.ksdfsdfongzhong.com/cas" />
 			</bean>
 		</property>
 	</bean>

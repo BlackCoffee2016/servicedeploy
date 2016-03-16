@@ -6,7 +6,7 @@
 
 	<bean name="authenticationFilter"
 		class="org.jasig.cas.client.authentication.AuthenticationFilter"
-		p:casServerLoginUrl="http://10.230.10.26:8088/cas/login" p:serverName="http://127.0.0.1:8080" />
+		p:casServerLoginUrl="http://1.1.1.2:8088/cas/login" p:serverName="http://127.0.0.1:8080" />
 		
 	<bean name="ticketValidationFilter"
 		class="org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter"
@@ -14,7 +14,7 @@
 		<property name="redirectAfterValidation" value="true" />
 		<property name="ticketValidator">
 			<bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
-				<constructor-arg index="0" value="http://10.230.10.26:8088/cas" />
+				<constructor-arg index="0" value="http://1.1.1.2:8088/cas" />
 			</bean>
 		</property>
 	</bean>
